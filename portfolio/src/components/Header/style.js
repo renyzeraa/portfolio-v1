@@ -46,12 +46,29 @@ export const Container = styled.div`
             font-size: 18px;
             color: ${({ theme }) => theme.COLORS.BLACK};
             padding-bottom: 8px;
-            border-bottom: 2px solid transparent;
-            :hover {
+
+            position: relative;
+
+            &::after {
+              content: '';
+              width: 0%;
+              height: 2px;
+              background: #800add;
+
+              position: absolute;
+              left: 0;
+              bottom: -0.5rem;
+
+              transition: width 0.2s;
+            }
+
+            &:hover {
               font-weight: bold;
-              transition: 0.5s;
               color: #800add;
-              border-color: #800add;
+
+              ::after {
+                width: 100%;
+              }
             }
           }
         }

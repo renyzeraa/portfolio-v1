@@ -24,7 +24,7 @@ export function Header() {
               <a href="#projects">Projetos</a>
             </li>
             <li>
-              <a href="#">Formação</a>
+              <a href="#formation">Formação</a>
             </li>
           </ul>
         </nav>
