@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  position: relative;
   margin-top: 60px;
   > main {
     display: grid;
@@ -45,10 +46,10 @@ export const Container = styled.div`
           &::before {
             content: '';
             position: absolute;
-            left: -32px;
-            top: 8px;
-            width: 82px;
-            height: 12px;
+            left: -46px;
+            top: 3px;
+            width: 111px;
+            height: 15px;
             background: ${({ theme }) => theme.COLORS.PURPLE_200};
             transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
             z-index: -1;
@@ -56,10 +57,10 @@ export const Container = styled.div`
           &::after {
             content: '';
             position: absolute;
-            left: -16px;
-            top: 10px;
-            width: 82px;
-            height: 11px;
+            left: -23px;
+            top: 4px;
+            width: 111px;
+            height: 15px;
             background: ${({ theme }) => theme.COLORS.PURPLE_100};
             transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
             z-index: -1;
@@ -67,7 +68,6 @@ export const Container = styled.div`
         }
 
         .title-introduction {
-          /* margin-top: 82px; */
           max-width: 455px;
           text-align: right;
         }
@@ -83,7 +83,7 @@ export const Container = styled.div`
 
     .about-content {
       background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-      width: calc(100vw - 17px);
+      width: calc(100vw - 23px);
 
       .content {
         padding: 0 24px;
@@ -99,7 +99,7 @@ export const Container = styled.div`
             font-family: 'Fira Sans';
             font-style: normal;
             font-weight: 400;
-            font-size: 18px;
+            font-size: 22px;
             line-height: 29px;
 
             /* c1 */
@@ -123,6 +123,7 @@ export const Container = styled.div`
       max-width: 1120px;
       width: 100%;
       justify-content: space-between;
+      align-items: center;
       .title-content {
         width: 35ch;
         word-break: break-all;
@@ -131,50 +132,267 @@ export const Container = styled.div`
 
       .projects {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 20px;
-        padding-right: 24px;
+        gap: 12px;
+
+        font-family: 'Fira Sans';
         position: relative;
+
         .project {
-          padding: 80px;
-          border-radius: 10px;
-          text-align: center;
-          span {
-            font-family: 'Fira Sans';
+          height: fit-content;
+          width: fit-content;
+          padding: 24px;
+          display: flex;
+          gap: 48px;
+
+          background: #f5f5f5;
+
+          border: 1px solid #f0f0f0;
+          border-radius: 5px;
+
+          .title {
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 20px;
+            color: #000000;
+            margin-bottom: 12px;
+          }
+
+          p {
+            width: 35ch;
             font-weight: 400;
-            font-size: 24px;
-            color: black;
-            background-color: white;
-            padding: 8px;
-            border-radius: 4px;
-          }
-          background-repeat: no-repeat;
-          background-position: center left;
-          background-size: cover;
-          filter: blur(2px);
-          :hover {
-            transition: 0.5s;
-            filter: blur(0px);
-            transform: scale(1.1);
+            font-size: 18px;
+            line-height: 20px;
+            color: #525252;
           }
 
-          :nth-child(1) {
-            background-image: url(https://user-images.githubusercontent.com/101990719/186289394-b1b1dcb5-9700-4abd-9866-ec3f1e6e1caf.png);
+          .spans {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            width: 200px;
+            span {
+              background: black;
+              border-radius: 5px;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+              color: #dfdfdf;
+              padding: 5px 6px;
+            }
           }
 
-          :nth-child(2) {
-            background-image: url(https://user-images.githubusercontent.com/101990719/186289394-b1b1dcb5-9700-4abd-9866-ec3f1e6e1caf.png);
+          &::before {
+            content: '';
+            position: absolute;
+            left: -6px;
+            top: 18px;
+            width: 6px;
+            height: 22px;
+            background: linear-gradient(180deg, #b629f8 0%, #800add 100%);
+            z-index: -1;
           }
+        }
 
-          :nth-child(3) {
-            background-image: url(https://user-images.githubusercontent.com/101990719/186289394-b1b1dcb5-9700-4abd-9866-ec3f1e6e1caf.png);
+        .project:nth-child(2) {
+          ::before {
+            top: 153px;
           }
-
-          :nth-child(4) {
-            background-image: url(https://user-images.githubusercontent.com/101990719/186289394-b1b1dcb5-9700-4abd-9866-ec3f1e6e1caf.png);
+        }
+        .project:nth-child(3) {
+          ::before {
+            top: 286px;
           }
         }
       }
     }
+
+    .formation-content {
+      background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+      width: calc(100vw - 23px);
+      .content {
+        padding: 0 24px;
+        max-width: 1120px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        .formation {
+          width: 75ch;
+          display: grid;
+          gap: 12px;
+          align-items: center;
+          justify-items: start;
+
+          .course-content {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 20px 12px;
+
+            .courses {
+              display: grid;
+              gap: 12px;
+            }
+            h3 {
+              margin-bottom: 12px;
+              font-family: 'Fira Sans';
+              font-style: normal;
+              font-weight: 700;
+              font-size: 22px;
+              line-height: 20px;
+
+              color: #8f8f8f;
+            }
+            a {
+              font-family: 'Fira Sans';
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 20px;
+
+              color: #ffffff;
+
+              span {
+                font-family: 'Fira Sans';
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 20px;
+
+                color: #8f8f8f;
+              }
+            }
+          }
+          p {
+            font-family: 'Fira Sans';
+            font-weight: 400;
+            font-size: 22px;
+            line-height: 29px;
+            color: ${({ theme }) => theme.COLORS.GRAY_200};
+          }
+        }
+
+        .title-content {
+          max-width: 35ch;
+          line-height: 180px;
+          margin-left: 15px;
+          word-break: break-all;
+          text-align: right;
+
+          .title-introduction {
+            line-height: 124px;
+          }
+        }
+      }
+    }
+  }
+
+  > footer {
+    background-color: #000000;
+
+    section {
+      padding: 105px 24px 180px;
+      max-width: 1120px;
+      width: 100%;
+      margin: 0 auto;
+      color: white;
+      display: flex;
+      justify-content: space-between;
+      position: relative;
+      .text {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 32px;
+
+        width: 40ch;
+
+        color: #cccccc;
+
+        &::before {
+          content: '';
+          position: absolute;
+          left: -8px;
+          top: -7px;
+          width: 111px;
+          height: 15px;
+          background: ${({ theme }) => theme.COLORS.PURPLE_200};
+          transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
+          z-index: 2;
+        }
+        &::after {
+          content: '';
+          position: absolute;
+          left: 11px;
+          top: -3px;
+          width: 111px;
+          height: 15px;
+          background: ${({ theme }) => theme.COLORS.PURPLE_100};
+          transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
+          z-index: 2;
+        }
+      }
+      .contact {
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 40px;
+
+        color: #ffffff;
+
+        display: grid;
+        gap: 12px;
+
+        ul {
+          display: flex;
+          justify-content: center;
+          gap: 24px;
+        }
+      }
+
+      .by {
+        position: absolute;
+
+        bottom: 12px;
+        right: 420px;
+
+        font-family: 'Fira Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 32px;
+        /* identical to box height, or 178% */
+
+        text-align: center;
+
+        /* c7 */
+
+        color: #8f8f8f;
+
+        svg {
+          color: red;
+        }
+      }
+    }
+  }
+
+  /* BACK TO TOP */
+  #backToTopButton {
+    position: fixed;
+    bottom: 1rem;
+    right: 4rem;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transform: translateY(100%);
+    transition: 200ms;
+  }
+
+  #backToTopButton.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
   }
 `
