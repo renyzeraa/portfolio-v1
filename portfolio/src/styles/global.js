@@ -21,9 +21,7 @@ button , a {
   transition: filter 0.2s;
 }
 
-a:hover {
-  font-weight: bold !important;
-}
+
 
 button:hover {
   filter: brightness(0.9)
