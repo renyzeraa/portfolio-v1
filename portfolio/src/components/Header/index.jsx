@@ -1,5 +1,7 @@
 import { Container } from './style'
 import brasil from '../../assets/brasil.png'
+import { AiFillGithub, AiFillLinkedin } from 'react-icons/ai'
+import { SiGmail } from 'react-icons/si'
 
 export function Header() {
   return (
@@ -16,16 +18,27 @@ export function Header() {
         <nav className="menu-nav">
           <ul>
             <li>
-              <a href="#">Sobre</a>
+              <a href="#about">Sobre</a>
             </li>
             <li>
-              <a href="#">Projetos</a>
+              <a href="#projects">Projetos</a>
             </li>
             <li>
               <a href="#">Formação</a>
             </li>
           </ul>
         </nav>
+        <div className="social">
+          <a href="https://github.com/renyzeraa" target="_blank">
+            <AiFillGithub />
+          </a>
+          <a href="https://www.linkedin.com/in/renyzeraa/" target="_blank">
+            <AiFillLinkedin />
+          </a>
+          <a href="mailto:renansilvaytb@gmail.com" target="_blank">
+            <SiGmail />
+          </a>
+        </div>
       </main>
     </Container>
   )
