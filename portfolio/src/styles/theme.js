@@ -10,10 +10,11 @@ export default {
     WHITE: '#FFF',
 
     GRAY_100: '#F5F5F5',
-    GRAY_300: '#666360',
-
+    GRAY_300: '#666360'
+  },
+  FONTS: {
     // REGULAR & BOLD
-    F0NT_IBM: "'IBM Plex Mono', monospace;",
+    FONT_IBM: "'IBM Plex Mono', monospace;",
     // REGULAR & BOLD
     FONT_FIRA: "'Fira Sans', sans-serif;"
   }
