@@ -1,6 +1,6 @@
 import { Container } from './style'
 import { Header } from '../../components/Header'
-import my_photo from '../../assets/my_photo.png'
+import photo from '../../assets/my_photo.png'
 import cursos from '../../assets/cursos.svg'
 import idiomas from '../../assets/idiomas.svg'
 import arrow from '../../assets/arrow.svg'
@@ -34,7 +34,22 @@ export function Home() {
             <h1 className="title-introduction">DEV FRONT END</h1>
           </div>
           <div className="photo-content">
-            <img src={my_photo} alt="Foto de Renan Silva" />
+            <svg
+              className="border-img"
+              width="417"
+              height="586"
+              viewBox="0 0 417 586"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M3 102.551L414 4V482.464L3 582V102.551Z"
+                stroke="#B629F8"
+                stroke-width="6"
+              />
+            </svg>
+
+            <img src={photo} alt="Foto de Renan Silva" />
           </div>
         </section>
 
@@ -141,12 +156,7 @@ export function Home() {
           <div className="content">
             <div className="formation">
               <p>
-                No momento sou <strong>graduando</strong> em
-                <strong>Ciências da Computação 🎓</strong>. Estudo
-                <strong> FullStack</strong> e especialização em React.js no
-                curso
-                <strong> Ignite</strong> da Rocketseat. Além disso me mantenho
-                sempre atualizado com outros cursos intensivos, bootcamps,
+                Me mantenho sempre atualizado com cursos intensivos, bootcamps,
                 hackatons e mais alguns eventos online.
               </p>
               <div className="course-content">

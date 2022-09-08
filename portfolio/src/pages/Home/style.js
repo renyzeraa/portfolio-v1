@@ -70,14 +70,26 @@ export const Container = styled.div`
         .title-introduction {
           max-width: 455px;
           text-align: right;
+          line-height: 80px;
+          font-size: 100px;
         }
       }
 
-      .photo-content img {
-        object-fit: cover;
-        object-position: center;
-        height: 100%;
-        padding-left: 24px;
+      .photo-content {
+        position: relative;
+        .border-img {
+          position: absolute;
+          top: 20px;
+          left: 40px;
+        }
+        img {
+          object-fit: cover;
+          object-position: center;
+          height: 100%;
+          padding-left: 24px;
+
+          border-radius: skew(0deg, -15deg);
+        }
       }
     }
 
@@ -266,7 +278,7 @@ export const Container = styled.div`
             font-family: 'Fira Sans';
             font-weight: 400;
             font-size: 22px;
-            line-height: 29px;
+            line-height: 35px;
             color: ${({ theme }) => theme.COLORS.GRAY_200};
           }
         }
