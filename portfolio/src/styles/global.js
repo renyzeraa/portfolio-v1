@@ -7,8 +7,14 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 
+
+html{
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100}; 
+  -webkit-font-smoothing: antialiased;
 }
 
 ul {
