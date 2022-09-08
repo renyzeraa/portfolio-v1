@@ -1,5 +1,5 @@
 import { Container } from './style'
-import brasil from '../../../assets/brasil.png'
+import brasil from '../../assets/brasil.png'
 
 export function Header() {
   return (

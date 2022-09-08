@@ -1,12 +1,12 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-  a {
-    text-decoration: none;
-  }
   width: 100%;
-  border-bottom: 1px solid #a839ff;
-  background-color: #dadada;
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.PURPLE_100};
+  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100};
+  position: fixed;
+  top: 0;
+
   main {
     display: flex;
     justify-content: space-between;
@@ -15,6 +15,7 @@ export const Container = styled.div`
     padding: 0 24px;
     max-width: 1120px;
     margin: 0 auto;
+
     .logo {
       display: flex;
       align-items: center;
@@ -26,28 +27,22 @@ export const Container = styled.div`
         height: 100%;
       }
       p {
-        text-decoration: none;
-        color: white;
-        font-family: 'IBM Plex Mono';
-        font-weight: 400;
-        font-size: 48px;
-        line-height: 60px;
-        color: #141414;
+        font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
+        font-size: 34px;
+        color: ${({ theme }) => theme.COLORS.BLACK};
       }
     }
 
     .menu-nav {
       ul {
         display: flex;
-        list-style: none;
-        gap: 8px;
+        gap: 12px;
+        align-items: center;
 
         li a {
-          font-family: 'Fira Sans', sans-serif;
-          font-weight: 400;
+          font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
           font-size: 22px;
-          line-height: 60px;
-          color: #141414;
+          color: ${({ theme }) => theme.COLORS.BLACK};
         }
       }
     }
