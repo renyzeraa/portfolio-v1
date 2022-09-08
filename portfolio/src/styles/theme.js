@@ -10,6 +10,7 @@ export default {
     WHITE: '#FFF',
 
     GRAY_100: '#F5F5F5',
+    GRAY_200: '#B8B8B8',
     GRAY_300: '#666360'
   },
   FONTS: {

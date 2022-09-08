@@ -34,4 +34,8 @@ img {
   display: block;
 }
 
+strong {
+  color:${({ theme }) => theme.COLORS.WHITE}; 
+}
+
 `
