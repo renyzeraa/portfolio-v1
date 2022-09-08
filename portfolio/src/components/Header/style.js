@@ -6,7 +6,7 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100};
   position: fixed;
   top: 0;
-
+  z-index: 999;
   main {
     display: flex;
     justify-content: space-between;
@@ -41,7 +41,7 @@ export const Container = styled.div`
 
         li a {
           font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
-          font-size: 22px;
+          font-size: 18px;
           color: ${({ theme }) => theme.COLORS.BLACK};
         }
       }
