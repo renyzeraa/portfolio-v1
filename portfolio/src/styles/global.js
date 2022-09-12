@@ -45,4 +45,29 @@ strong {
   color:${({ theme }) => theme.COLORS.WHITE}; 
 }
 
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  background: black; 
+ 
+  
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background:#b629f8; 
+  border-radius:10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #A839FF; 
+  
+}
+
+
 `
