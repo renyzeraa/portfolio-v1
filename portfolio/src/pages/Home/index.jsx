@@ -12,12 +12,17 @@ import {
   AiOutlineGithub,
   AiFillLinkedin
 } from 'react-icons/ai'
+import html from '../../assets/html.svg'
+import css from '../../assets/css.svg'
+import react from '../../assets/react.svg'
+import js from '../../assets/js.svg'
+import git from '../../assets/git.svg'
 
 export function Home() {
   window.addEventListener('scroll', showBackToTopButtonOnScroll)
 
   function showBackToTopButtonOnScroll() {
-    if (scrollY > 500) {
+    if (scrollY > 1200) {
       document.querySelector('#backToTopButton').classList.add('show')
     } else {
       document.querySelector('#backToTopButton').classList.add('show')
@@ -30,10 +35,14 @@ export function Home() {
       <main>
         <section className="home-content" id="home">
           <div className="title-content">
-            <h1 className="title-name">RENAN SILVA</h1>
-            <h1 className="title-introduction">DEV FRONT END</h1>
+            <h1 className="title-name">
+              RENAN <br /> SILVA
+            </h1>
           </div>
           <div className="photo-content">
+            <h1 className="title-dev">
+              DEV <br /> FRONT <br /> END
+            </h1>
             <svg
               className="border-img"
               width="417"
@@ -54,31 +63,46 @@ export function Home() {
         </section>
 
         <section className="about-content" id="about">
-          <div className="content">
-            <div className="text-content">
-              <p>
-                Prazer sou Renan Leandro da Silva 👋🏼, mas pode me chamar de
-                renyzera também. Sou <strong>Desenvolvedor </strong> de Rio do
-                Sul (SC) 📍. Serumaninho mente aberta, fã de formula 1 e
-                automobilismo 🏁, vive a vida de propósitos, sonhos e parceiro
-                para tomar umas 🍻.
-              </p>
-              <p>
-                Desenvolvo projetos utilizando <strong>React.js</strong>,
-                <strong> styled-components</strong> com
-                <strong> JavaScript</strong>, que vai desde projetos com API's
-                integradas até Landing Pages. Algumas aplicações web que fiz,
-                você pode conferir logo abaixo.
-              </p>
-              <p>
-                Tenho vivência com <strong>HTML5</strong>, <strong>CSS3</strong>
-                , <strong>JavaScript</strong>, <strong>React.js</strong> focando
-                em <strong>FrontEnd</strong> .
-              </p>
+          <div className="text-content">
+            <p>
+              Prazer sou Renan Leandro da Silva 👋🏼, mas pode me chamar de
+              renyzera também. Sou <strong>desenvolvedor</strong>, tenho 23 anos
+              e moro em Santa Catarina.
+            </p>
+            <p>
+              Desenvolvo projetos utilizando <strong>React.js</strong>,
+              <strong>styled-components</strong> com <strong>JavaScript</strong>
+              , que vão desde uma Landing Page até aplicações com API’s. Algumas
+              aplicações web que fiz, você pode conferir logo abaixo e também la
+              no meu github.
+            </p>
+            <p>
+              Pretendo seguir minha carreira como DEV FrontEnd, sempre
+              resolvendo problemas com códigos, seguindo metodologia ágil e que
+              tenham um bom desempenho e entregando valor para o cliente final.
+            </p>
+            <div className="techs-content">
+              <ul>
+                <li>
+                  <img src={html} alt="html icon" />
+                </li>
+                <li>
+                  <img src={css} alt="css icon" />
+                </li>
+                <li>
+                  <img src={js} alt="js icon" />
+                </li>
+                <li>
+                  <img src={react} alt="react icon" />
+                </li>
+                <li>
+                  <img src={git} alt="git icon" />
+                </li>
+              </ul>
             </div>
-            <div className="title-content">
-              <h1 className="title-introduction">sobre</h1>
-            </div>
+          </div>
+          <div className="title-content">
+            <h1 className="title-introduction">sobre</h1>
           </div>
         </section>
 
@@ -99,13 +123,6 @@ export function Home() {
                   API própria.
                 </p>
               </div>
-              <div className="tech-libs">
-                <h3 className="title">Techs e Libs Utilizadas</h3>
-                <div className="spans">
-                  <span>React.js</span>
-                  <span>Node.js</span>
-                </div>
-              </div>
             </a>
             <a
               href="https://renyzeraa.github.io/rocketseat-explorer/Stage09/Challenge01/"
@@ -118,14 +135,6 @@ export function Home() {
                   Landing page para um cliente, no qual a empresa faz chapeação
                   automotiva.
                 </p>
-              </div>
-              <div className="tech-libs">
-                <h3 className="title">Techs e Libs Utilizadas</h3>
-                <div className="spans">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
               </div>
             </a>
             <a
@@ -140,14 +149,13 @@ export function Home() {
                   para celular também.
                 </p>
               </div>
-              <div className="tech-libs">
-                <h3 className="title">Techs e Libs Utilizadas</h3>
-                <div className="spans">
-                  <span>HTML</span>
-                  <span>CSS</span>
-                  <span>JavaScript</span>
-                </div>
-              </div>
+            </a>
+            <a
+              className="btn-git"
+              href="https://github.com/renyzeraa"
+              target="_blank"
+            >
+              Clique para ver mais projetos
             </a>
           </div>
         </section>

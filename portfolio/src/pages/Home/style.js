@@ -3,21 +3,23 @@ import styled from 'styled-components'
 export const Container = styled.div`
   position: relative;
   margin-top: 60px;
+
   > main {
     display: grid;
-    justify-items: center;
+    justify-content: center;
 
     section {
-      padding: 105px 35px;
+      max-width: 1120px;
+      padding: 105px 24px;
     }
 
     .title-introduction {
-      font-family: 'IBM Plex Mono';
+      font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
       font-weight: 700;
       font-size: 128px;
       line-height: 101px;
       text-transform: uppercase;
-      background: linear-gradient(180deg, #b629f8 0%, #800add 100%);
+      background: linear-gradient(180deg, #b629f8 20%, #800add 80%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
@@ -26,61 +28,40 @@ export const Container = styled.div`
 
     .home-content {
       display: flex;
-      max-width: 1120px;
-      width: 100%;
+      align-items: center;
       justify-content: space-between;
+
       .title-content {
-        margin: 30px 0 0 22px;
-        position: relative;
-        display: grid;
-        align-content: space-between;
         .title-name {
-          font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
-          font-weight: 700;
-          font-size: 122px;
-          line-height: 100px;
-          text-transform: uppercase;
-          max-width: 200px;
-          color: #141414;
-
-          &::before {
-            content: '';
-            position: absolute;
-            left: -46px;
-            top: 3px;
-            width: 111px;
-            height: 15px;
-            background: ${({ theme }) => theme.COLORS.PURPLE_200};
-            transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
-            z-index: -1;
-          }
-          &::after {
-            content: '';
-            position: absolute;
-            left: -23px;
-            top: 4px;
-            width: 111px;
-            height: 15px;
-            background: ${({ theme }) => theme.COLORS.PURPLE_100};
-            transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
-            z-index: -1;
-          }
-        }
-
-        .title-introduction {
-          max-width: 455px;
-          text-align: right;
-          line-height: 80px;
-          font-size: 100px;
+          font-family: 'Annie Use Your Telescope', cursive;
+          font-weight: 400;
+          font-size: 165px;
+          line-height: 122px;
+          color: #f5f5f5;
+          text-shadow: 15px 12px 11px #000000;
         }
       }
 
       .photo-content {
         position: relative;
+
+        .title-dev {
+          font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
+          font-weight: 700;
+          font-size: 42px;
+          line-height: 34px;
+          text-transform: uppercase;
+          color: #141414;
+          text-shadow: 8px 10px 4px rgb(0 0 0 / 45%);
+          position: absolute;
+          left: 52px;
+          top: 118px;
+        }
+
         .border-img {
           position: absolute;
-          top: 20px;
-          left: 40px;
+          top: 14px;
+          left: 45px;
         }
         img {
           object-fit: cover;
@@ -94,46 +75,41 @@ export const Container = styled.div`
     }
 
     .about-content {
-      background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-      width: calc(100vw - 23px);
+      display: flex;
+      justify-content: space-between;
 
-      .content {
-        padding: 0 24px;
-        max-width: 1120px;
-        margin: 0 auto;
-        display: flex;
-        justify-content: space-between;
-        .text-content {
-          width: 75ch;
-          display: grid;
-          gap: 12px;
-          p {
-            font-family: 'Fira Sans';
-            font-style: normal;
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 29px;
+      .text-content {
+        width: 75ch;
+        display: grid;
+        gap: 12px;
 
-            /* c1 */
+        p {
+          font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 29px;
+          color: ${({ theme }) => theme.COLORS.GRAY_200};
+        }
 
-            color: ${({ theme }) => theme.COLORS.GRAY_200};
+        .techs-content {
+          ul {
+            padding: 24px 24px 0;
+            display: flex;
           }
         }
+      }
 
-        .title-content {
-          max-width: 20ch;
-          margin-left: 15px;
-          word-break: break-all;
-          text-align: right;
-          display: inline-block;
-        }
+      .title-content {
+        max-width: 20ch;
+        margin-left: 15px;
+        word-break: break-all;
+        text-align: right;
+        display: inline-block;
       }
     }
 
     .project-content {
       display: flex;
-      max-width: 1120px;
-      width: 100%;
       justify-content: space-between;
       align-items: center;
       .title-content {
@@ -219,11 +195,7 @@ export const Container = styled.div`
     }
 
     .formation-content {
-      background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-      width: calc(100vw - 23px);
       .content {
-        padding: 0 24px;
-        max-width: 1120px;
         margin: 0 auto;
         display: flex;
         justify-content: space-between;
