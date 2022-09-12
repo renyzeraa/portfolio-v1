@@ -2,8 +2,8 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   width: 100%;
-  border-bottom: 1px solid ${({ theme }) => theme.COLORS.PURPLE_100};
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100};
+  border-bottom: 1px solid ${({ theme }) => theme.COLORS.GRAY_300};
+  background-color: ${({ theme }) => theme.COLORS.PURPLE_300};
   position: fixed;
   top: 0;
   z-index: 999;
@@ -30,7 +30,7 @@ export const Container = styled.div`
       p {
         font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
         font-size: 34px;
-        color: ${({ theme }) => theme.COLORS.BLACK};
+        color: ${({ theme }) => theme.COLORS.WHITE};
       }
     }
 
@@ -44,7 +44,7 @@ export const Container = styled.div`
           a {
             font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
             font-size: 18px;
-            color: ${({ theme }) => theme.COLORS.BLACK};
+            color: ${({ theme }) => theme.COLORS.WHITE};
             padding-bottom: 8px;
 
             position: relative;
@@ -53,7 +53,7 @@ export const Container = styled.div`
               content: '';
               width: 0%;
               height: 2px;
-              background: #800add;
+              background: WHITE;
 
               position: absolute;
               left: 0;
@@ -64,7 +64,7 @@ export const Container = styled.div`
 
             &:hover {
               font-weight: bold;
-              color: #800add;
+              color: WHITE;
 
               ::after {
                 width: 100%;
