@@ -2,28 +2,23 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
   position: relative;
-  margin-top: 60px;
 
   > main {
     display: grid;
     justify-content: center;
 
     section {
-      max-width: 1120px;
-      padding: 105px 24px;
+      width: 112rem;
+      padding: 21rem 2.4rem 0;
     }
 
     .title-introduction {
       font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
-      font-weight: 700;
-      font-size: 128px;
-      line-height: 101px;
+      font-size: 12.8rem;
+      line-height: 10.1rem;
       text-transform: uppercase;
-      background: linear-gradient(180deg, #b629f8 20%, #800add 80%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+      text-shadow: 1.9rem 2rem 1.9rem #000000;
+      color: ${({ theme }) => theme.COLORS.PURPLE_050};
     }
 
     .home-content {
@@ -35,10 +30,10 @@ export const Container = styled.div`
         .title-name {
           font-family: 'Annie Use Your Telescope', cursive;
           font-weight: 400;
-          font-size: 165px;
-          line-height: 122px;
-          color: #f5f5f5;
-          text-shadow: 15px 12px 11px #000000;
+          font-size: 16.5rem;
+          line-height: 12.2rem;
+          color: ${({ theme }) => theme.COLORS.WHITE};
+          text-shadow: 1.5rem 1.2rem 1.1rem #000000;
         }
       }
 
@@ -47,27 +42,26 @@ export const Container = styled.div`
 
         .title-dev {
           font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
-          font-weight: 700;
-          font-size: 42px;
-          line-height: 34px;
+          font-size: 4.2rem;
+          line-height: 3.4rem;
           text-transform: uppercase;
-          color: #141414;
-          text-shadow: 8px 10px 4px rgb(0 0 0 / 45%);
+          color: ${({ theme }) => theme.COLORS.BACKGROUND_800};
+          text-shadow: 0.8rem 1rem 0.4rem rgb(0 0 0 / 45%);
           position: absolute;
-          left: 52px;
-          top: 118px;
+          left: 5.2rem;
+          top: 11.8rem;
         }
 
         .border-img {
           position: absolute;
-          top: 14px;
-          left: 45px;
+          top: 1.4rem;
+          left: 4.5rem;
         }
         img {
           object-fit: cover;
           object-position: center;
           height: 100%;
-          padding-left: 24px;
+          padding-left: 2.4rem;
 
           border-radius: skew(0deg, -15deg);
         }
@@ -79,29 +73,28 @@ export const Container = styled.div`
       justify-content: space-between;
 
       .text-content {
-        width: 75ch;
+        width: 110ch;
         display: grid;
-        gap: 12px;
+        gap: 1.2rem;
 
         p {
           font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
-          font-weight: 400;
-          font-size: 22px;
-          line-height: 29px;
+          font-size: 2.2rem;
+          line-height: 2.9rem;
           color: ${({ theme }) => theme.COLORS.GRAY_200};
         }
 
         .techs-content {
           ul {
-            padding: 24px 24px 0;
+            padding: 2.4rem 2.4rem 0;
             display: flex;
           }
         }
       }
 
       .title-content {
-        max-width: 20ch;
-        margin-left: 15px;
+        max-width: 32ch;
+        margin-left: 1.5rem;
         word-break: break-all;
         text-align: right;
         display: inline-block;
@@ -111,71 +104,93 @@ export const Container = styled.div`
     .project-content {
       display: flex;
       justify-content: space-between;
-      align-items: center;
+
       .title-content {
-        width: 35ch;
+        width: 47ch;
         word-break: break-all;
         text-align: left;
       }
 
       .projects {
-        display: grid;
-        gap: 12px;
-
-        font-family: 'Fira Sans';
+        display: flex;
+        gap: 2.8rem;
+        font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
         position: relative;
 
+        .btn-git {
+          position: absolute;
+          bottom: -7rem;
+          background-color: ${({ theme }) => theme.COLORS.WHITE};
+          padding: 1.2rem 1.2rem;
+          border-radius: 1rem;
+          left: 19.2rem;
+          box-shadow: 1.5rem 1.5rem 0.8rem rgb(0 0 0 / 45%);
+
+          &:hover {
+            transition: 0.5s;
+            transform: scale(1.05);
+          }
+        }
+
         .project {
-          height: fit-content;
-          width: fit-content;
-          padding: 24px;
-          display: flex;
-          gap: 48px;
-
+          width: 19rem;
+          padding: 1.6rem;
           background: #f5f5f5;
-
           border: 1px solid #f0f0f0;
           border-radius: 5px;
+          text-align: center;
+          box-shadow: 1.5rem 1.5rem 0.8rem rgb(0 0 0 / 45%);
 
-          .title {
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 20px;
-            color: #000000;
-            margin-bottom: 12px;
+          &:hover {
+            transition: 0.8s;
+            box-shadow: 0px 1px 2rem 1rem rgb(255 254 254 / 45%);
           }
 
-          p {
-            width: 35ch;
-            font-weight: 400;
-            font-size: 18px;
-            line-height: 20px;
-            color: #525252;
+          .about-project {
+            .title {
+              font-size: 1.8rem;
+              color: ${({ theme }) => theme.COLORS.BLACK};
+              margin-bottom: 1.2rem;
+            }
+
+            img {
+              border-radius: 5px;
+              object-position: center top;
+              object-fit: cover;
+              height: 8rem;
+              width: 100%;
+              margin-bottom: 1.2rem;
+            }
+
+            p {
+              line-height: 2rem;
+              color: ${({ theme }) => theme.COLORS.GRAY_300};
+              height: 20ch;
+
+              font-size: 1.5rem;
+            }
           }
 
           .spans {
             display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            width: 200px;
+            justify-content: space-between;
             span {
               background: black;
-              border-radius: 5px;
-              font-weight: 400;
-              font-size: 14px;
-              line-height: 20px;
+              border-radius: 0.5rem;
+              font-size: 1.4rem;
+              line-height: 2rem;
               color: #dfdfdf;
-              padding: 5px 6px;
+              padding: 0.4rem 0.3rem;
             }
           }
 
           &::before {
             content: '';
             position: absolute;
-            left: -6px;
-            top: 18px;
-            width: 6px;
-            height: 22px;
+            left: 1.5rem;
+            top: -0.5rem;
+            width: 6rem;
+            height: 6rem;
             background: linear-gradient(180deg, #b629f8 0%, #800add 100%);
             z-index: -1;
           }
@@ -183,87 +198,80 @@ export const Container = styled.div`
 
         .project:nth-child(2) {
           ::before {
-            top: 153px;
+            left: 23.3rem;
           }
         }
         .project:nth-child(3) {
           ::before {
-            top: 286px;
+            left: 45.1rem;
           }
         }
       }
     }
 
     .formation-content {
+      padding-bottom: 14rem;
       .content {
-        margin: 0 auto;
         display: flex;
         justify-content: space-between;
-
+        font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
         .formation {
-          width: 75ch;
+          p {
+            width: 42ch;
+          }
+
           display: grid;
-          gap: 12px;
+          gap: 2.2rem;
           align-items: center;
           justify-items: start;
 
           .course-content {
             display: grid;
             grid-template-columns: auto 1fr;
-            gap: 20px 12px;
+            gap: 2.4rem 1.4rem;
+
+            svg {
+              font-size: 2.2rem;
+              color: ${({ theme }) => theme.COLORS.GRAY_100};
+            }
 
             .courses {
               display: grid;
-              gap: 12px;
+              gap: 1.2rem;
             }
             h3 {
-              margin-bottom: 12px;
-              font-family: 'Fira Sans';
-              font-style: normal;
-              font-weight: 700;
-              font-size: 22px;
-              line-height: 20px;
-
-              color: #8f8f8f;
+              margin-bottom: 1.2rem;
+              font-size: 2.2rem;
+              color: ${({ theme }) => theme.COLORS.GRAY_200};
             }
             a {
-              font-family: 'Fira Sans';
-              font-style: normal;
-              font-weight: 400;
-              font-size: 18px;
-              line-height: 20px;
-
-              color: #ffffff;
+              font-size: 1.8rem;
+              line-height: 2rem;
+              color: ${({ theme }) => theme.COLORS.GRAY_100};
 
               span {
-                font-family: 'Fira Sans';
-                font-style: normal;
-                font-weight: 400;
-                font-size: 18px;
-                line-height: 20px;
-
+                font-size: 1.8rem;
+                line-height: 2rem;
                 color: #8f8f8f;
               }
             }
           }
           p {
-            font-family: 'Fira Sans';
-            font-weight: 400;
-            font-size: 22px;
-            line-height: 35px;
+            font-size: 2.2rem;
+            line-height: 3.5rem;
             color: ${({ theme }) => theme.COLORS.GRAY_200};
           }
         }
 
         .title-content {
-          max-width: 35ch;
-          line-height: 180px;
-          margin-left: 15px;
+          max-width: 42ch;
+          line-height: 18rem;
+          margin-left: 1.5rem;
           word-break: break-all;
           text-align: right;
 
           .title-introduction {
-            line-height: 124px;
+            line-height: 12.4rem;
           }
         }
       }
@@ -271,35 +279,29 @@ export const Container = styled.div`
   }
 
   > footer {
-    background-color: #000000;
-
+    font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
     section {
-      padding: 105px 24px 180px;
-      max-width: 1120px;
-      width: 100%;
+      padding: 10.5rem 2.4rem 18rem;
+      width: 112rem;
+
       margin: 0 auto;
-      color: white;
       display: flex;
       justify-content: space-between;
       position: relative;
+
       .text {
-        font-family: 'Fira Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 24px;
-        line-height: 32px;
-
+        font-size: 2.4rem;
+        line-height: 3.2rem;
         width: 40ch;
-
-        color: #cccccc;
+        color: ${({ theme }) => theme.COLORS.GRAY_200};
 
         &::before {
           content: '';
           position: absolute;
-          left: -8px;
-          top: -7px;
-          width: 111px;
-          height: 15px;
+          left: -0.8rem;
+          top: -0.7rem;
+          width: 11.1rem;
+          height: 1.5rem;
           background: ${({ theme }) => theme.COLORS.PURPLE_200};
           transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
           z-index: 2;
@@ -307,53 +309,44 @@ export const Container = styled.div`
         &::after {
           content: '';
           position: absolute;
-          left: 11px;
-          top: -3px;
-          width: 111px;
-          height: 15px;
+          left: 1.1rem;
+          top: -0.3rem;
+          width: 11.1rem;
+          height: 1.5rem;
           background: ${({ theme }) => theme.COLORS.PURPLE_100};
           transform: matrix(0.71, -0.59, 0.85, 0.71, 0, 0);
           z-index: 2;
         }
       }
       .contact {
-        font-family: 'Fira Sans';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 36px;
-        line-height: 40px;
-
+        font-size: 3.6rem;
         color: #ffffff;
-
         display: grid;
-        gap: 12px;
+        gap: 1.2rem;
 
         ul {
           display: flex;
           justify-content: center;
-          gap: 24px;
+          gap: 2.4rem;
+
+          svg {
+            color: ${({ theme }) => theme.COLORS.GRAY_100};
+            &:hover {
+              transition: 0.7s;
+              transform: scale(1.2);
+            }
+          }
         }
       }
 
       .by {
         position: absolute;
-
-        bottom: 12px;
-        right: 420px;
-
-        font-family: 'Fira Sans';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 18px;
-        line-height: 32px;
-        /* identical to box height, or 178% */
-
+        bottom: 1.2rem;
+        right: 42rem;
+        font-size: 1.8rem;
+        line-height: 3.2rem;
         text-align: center;
-
-        /* c7 */
-
         color: #8f8f8f;
-
         svg {
           color: red;
         }

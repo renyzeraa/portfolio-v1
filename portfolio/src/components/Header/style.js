@@ -12,24 +12,24 @@ export const Container = styled.div`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
-    padding: 0 24px;
-    max-width: 1120px;
+    height: 8rem;
+    padding: 0 2.4rem;
+    max-width: 112rem;
     margin: 0 auto;
     position: relative;
     .logo {
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 0.8rem;
       .bandeira-brasil {
-        margin-top: 8px;
+        margin-top: 0.8rem;
         display: block;
-        max-width: 40px;
+        max-width: 4rem;
         height: 100%;
       }
       p {
         font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
-        font-size: 34px;
+        font-size: 3.4rem;
         color: ${({ theme }) => theme.COLORS.WHITE};
       }
     }
@@ -37,15 +37,15 @@ export const Container = styled.div`
     .menu-nav {
       ul {
         display: flex;
-        gap: 24px;
+        gap: 2.4rem;
         align-items: center;
 
         li {
           a {
             font-family: ${({ theme }) => theme.FONTS.FONT_FIRA};
-            font-size: 18px;
+            font-size: 1.8rem;
             color: ${({ theme }) => theme.COLORS.WHITE};
-            padding-bottom: 8px;
+            padding-bottom: 0.8rem;
 
             position: relative;
 
@@ -78,16 +78,16 @@ export const Container = styled.div`
     .social {
       position: absolute;
       background: linear-gradient(180deg, #b629f8 0%, #800add 100%);
-      padding: 5px 16px;
-      border-radius: 0 0 5px 5px;
-      left: 24px;
-      top: 80px;
+      padding: 0.5rem 1.6rem;
+      border-radius: 0 0 0.5rem 0.5rem;
+      left: 2.4rem;
+      top: 8rem;
       display: flex;
-      gap: 16px;
+      gap: 1.6rem;
       transition: 0.5s;
       svg {
         color: ${({ theme }) => theme.COLORS.BACKGROUND_100};
-        font-size: 28px;
+        font-size: 2.8rem;
 
         :hover {
           transform: scale(1.1);

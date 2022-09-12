@@ -1,31 +1,36 @@
 import { Container } from './style'
 import { Header } from '../../components/Header'
-import photo from '../../assets/my_photo.png'
-import cursos from '../../assets/cursos.svg'
-import idiomas from '../../assets/idiomas.svg'
-import arrow from '../../assets/arrow.svg'
 import {
   AiFillHeart,
   AiOutlineWhatsApp,
   AiOutlineInstagram,
-  AiFillTwitterCircle,
   AiOutlineGithub,
   AiFillLinkedin
 } from 'react-icons/ai'
+import { BsBook } from 'react-icons/bs'
+import { IoLanguageOutline } from 'react-icons/io5'
+import { FaGraduationCap } from 'react-icons/fa'
+import { SiGmail } from 'react-icons/si'
+
+import photo from '../../assets/my_photo.png'
+import arrow from '../../assets/arrow.svg'
 import html from '../../assets/html.svg'
 import css from '../../assets/css.svg'
 import react from '../../assets/react.svg'
 import js from '../../assets/js.svg'
 import git from '../../assets/git.svg'
+import beauty from '../../assets/projects/beauty.png'
+import gpm from '../../assets/projects/gpm.png'
+import mymovies from '../../assets/projects/mymovies.png'
 
 export function Home() {
   window.addEventListener('scroll', showBackToTopButtonOnScroll)
 
   function showBackToTopButtonOnScroll() {
-    if (scrollY > 1200) {
+    if (scrollY > 400) {
       document.querySelector('#backToTopButton').classList.add('show')
     } else {
-      document.querySelector('#backToTopButton').classList.add('show')
+      document.querySelector('#backToTopButton').classList.remove('show')
     }
   }
 
@@ -54,7 +59,7 @@ export function Home() {
               <path
                 d="M3 102.551L414 4V482.464L3 582V102.551Z"
                 stroke="#B629F8"
-                stroke-width="6"
+                strokeWidth="6"
               />
             </svg>
 
@@ -110,6 +115,7 @@ export function Home() {
           <div className="title-content">
             <h1 className="title-introduction">projetos</h1>
           </div>
+
           <div className="projects">
             <a
               href="https://my-movies-aplication.netlify.app/"
@@ -118,10 +124,16 @@ export function Home() {
             >
               <div className="about-project">
                 <h3 className="title">My Movies</h3>
+                <img src={mymovies} alt="" />
                 <p>
                   Aplicativo para salvar seus filmes favoritos. Desenvolvida com
                   API própria.
                 </p>
+              </div>
+              <div className="spans">
+                <span>React</span>
+                <span>Node</span>
+                <span>JavaScript</span>
               </div>
             </a>
             <a
@@ -131,10 +143,16 @@ export function Home() {
             >
               <div className="about-project">
                 <h3 className="title">Gpm Car</h3>
+                <img src={gpm} alt="" />
                 <p>
                   Landing page para um cliente, no qual a empresa faz chapeação
                   automotiva.
                 </p>
+              </div>
+              <div className="spans">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
               </div>
             </a>
             <a
@@ -144,15 +162,22 @@ export function Home() {
             >
               <div className="about-project">
                 <h3 className="title">Beauty Salon</h3>
+                <img src={beauty} alt="" />
                 <p>
                   Landing page para uma empresa de salão de beleza, adaptada
                   para celular também.
                 </p>
               </div>
+              <div className="spans">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+              </div>
             </a>
+
             <a
               className="btn-git"
-              href="https://github.com/renyzeraa"
+              href="https://github.com/renyzeraa?tab=repositories"
               target="_blank"
             >
               Clique para ver mais projetos
@@ -165,10 +190,15 @@ export function Home() {
             <div className="formation">
               <p>
                 Me mantenho sempre atualizado com cursos intensivos, bootcamps,
-                hackatons e mais alguns eventos online.
+                hackatons, eventos online e presencial.
               </p>
               <div className="course-content">
-                <img src={cursos} alt="" />
+                <FaGraduationCap />
+                <div className="courses">
+                  <h3>Graduação</h3>
+                  <a>Bacharelado em Ciências da Computação</a>
+                </div>
+                <BsBook />
                 <div className="courses">
                   <h3>Cursos Intensivos</h3>
                   <a
@@ -181,7 +211,7 @@ export function Home() {
                     Curso Ignite RocketSeat <span>150hr</span>
                   </a>
                 </div>
-                <img src={idiomas} alt="" />
+                <IoLanguageOutline />
                 <div className="courses">
                   <h3>idiomas</h3>
                   <a>
@@ -204,13 +234,11 @@ export function Home() {
         <section>
           <div className="text">
             <p>
-              Estou disponível para projetos freelancer, híbrido e CLT/PJ. Entre
-              em contato comigo e marcamos uma conversa 😉.
+              Estou disponível para projetos. Entre em contato comigo e marcamos
+              uma conversa 😉.
             </p>
           </div>
           <div className="contact">
-            <a>renansilvaytb@gmail.com</a>
-
             <ul>
               <li>
                 <a
@@ -226,8 +254,8 @@ export function Home() {
                 </a>
               </li>
               <li>
-                <a href="https://twitter.com/renyzeraa" target="_blank">
-                  <AiFillTwitterCircle />
+                <a href="mailto:renansilvaytb@gmail.com" target="_blank">
+                  <SiGmail />
                 </a>
               </li>
               <li>
@@ -236,7 +264,10 @@ export function Home() {
                 </a>
               </li>
               <li>
-                <a href="https://www.linkedin.com/in/renyzeraa/">
+                <a
+                  href="https://www.linkedin.com/in/renyzeraa/"
+                  target="_blank"
+                >
                   <AiFillLinkedin />
                 </a>
               </li>
