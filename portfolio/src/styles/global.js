@@ -10,11 +10,11 @@ export default createGlobalStyle`
 
 html{
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
 }
 
 body {
-  background-color: ${({ theme }) => theme.COLORS.BACKGROUND_100}; 
-  -webkit-font-smoothing: antialiased;
+  background: ${({ theme }) => theme.COLORS.GRADIENT}; 
 }
 
 ul {
