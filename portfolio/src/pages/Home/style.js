@@ -123,7 +123,9 @@ export const Container = styled.div`
           background-color: ${({ theme }) => theme.COLORS.WHITE};
           padding: 1.2rem 1.2rem;
           border-radius: 1rem;
-          left: 19.2rem;
+          left: 20.2rem;
+
+          font-size: 1.6rem;
           box-shadow: 1.5rem 1.5rem 0.8rem rgb(0 0 0 / 45%);
 
           &:hover {
@@ -140,10 +142,12 @@ export const Container = styled.div`
           border-radius: 5px;
           text-align: center;
           box-shadow: 1.5rem 1.5rem 0.8rem rgb(0 0 0 / 45%);
-
+          transition: all 0.2s ease-in-out;
+          position: relative;
           &:hover {
             transition: 0.8s;
             box-shadow: 0px 1px 2rem 1rem rgb(255 254 254 / 45%);
+            transform: scale(1.1);
           }
 
           .about-project {
@@ -190,20 +194,20 @@ export const Container = styled.div`
             left: 1.5rem;
             top: -0.5rem;
             width: 6rem;
-            height: 6rem;
+            height: 0.6rem;
             background: linear-gradient(180deg, #b629f8 0%, #800add 100%);
-            z-index: -1;
+            z-index: -2;
           }
         }
 
         .project:nth-child(2) {
           ::before {
-            left: 23.3rem;
+            left: 1.3rem;
           }
         }
         .project:nth-child(3) {
           ::before {
-            left: 45.1rem;
+            left: 1.3rem;
           }
         }
       }
@@ -238,6 +242,10 @@ export const Container = styled.div`
             .courses {
               display: grid;
               gap: 1.2rem;
+
+              .not-cursor {
+                cursor: default;
+              }
             }
             h3 {
               margin-bottom: 1.2rem;

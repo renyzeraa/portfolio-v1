@@ -196,7 +196,9 @@ export function Home() {
                 <FaGraduationCap />
                 <div className="courses">
                   <h3>Graduação</h3>
-                  <a>Bacharelado em Ciências da Computação</a>
+                  <a className="not-cursor">
+                    Bacharelado em Ciências da Computação
+                  </a>
                 </div>
                 <BsBook />
                 <div className="courses">
@@ -206,7 +208,7 @@ export function Home() {
                     target="_blank"
                   >
                     Curso Explorer RocketSeat <span>120hr</span>
-                  </a>{' '}
+                  </a>
                   <a href="https://lp.rocketseat.com.br/ignite" target="_blank">
                     Curso Ignite RocketSeat <span>150hr</span>
                   </a>
@@ -214,7 +216,7 @@ export function Home() {
                 <IoLanguageOutline />
                 <div className="courses">
                   <h3>idiomas</h3>
-                  <a>
+                  <a className="not-cursor">
                     Inglês <span>/ Básico</span>
                   </a>
                 </div>
