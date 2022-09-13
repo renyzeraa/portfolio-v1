@@ -38,6 +38,9 @@ export function Home() {
     <Container>
       <Header />
       <main>
+        <a id="backToTopButton" href="#home">
+          <img src={arrow} alt="" />
+        </a>
         <section className="home-content" id="home">
           <div className="title-content">
             <h1 className="title-name">
@@ -280,9 +283,6 @@ export function Home() {
           </p>
         </section>
       </footer>
-      <a id="backToTopButton" href="#home">
-        <img src={arrow} alt="" />
-      </a>
     </Container>
   )
 }
