@@ -1,9 +1,11 @@
 import { Container } from './style'
+import { GiHamburgerMenu } from 'react-icons/gi'
+import { AiOutlineClose } from 'react-icons/ai'
 
 export function Header() {
   return (
     <Container>
-      <main>
+      <main className="desktop">
         <div className="logo">
           <p>&lt;/renyzeraa&gt;</p>
         </div>

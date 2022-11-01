@@ -68,5 +68,11 @@ export const Container = styled.div`
         }
       }
     }
+
+    @media (max-width: 700px) {
+      .menu-nav {
+        display: block;
+      }
+    }
   }
 `
