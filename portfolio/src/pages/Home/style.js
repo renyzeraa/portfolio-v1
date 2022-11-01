@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import bg from '../../assets/bg-ofi.png'
 
 export const Container = styled.div`
   position: relative;
@@ -7,10 +6,6 @@ export const Container = styled.div`
   > main {
     display: grid;
     justify-content: center;
-
-    background-image: url(${bg});
-    background-position: center top;
-    background-repeat: repeat;
 
     section {
       width: 112rem;

@@ -246,7 +246,10 @@ export function Home() {
           <div className="contact">
             <ul>
               <li>
-                <a href="#" target="_blank">
+                <a
+                  href="https://api.whatsapp.com/send?phone=5547920003040&text=Ol%C3%A1%20Renan%2C%20gostei%20do%20seu%20site%20e%20tenho%20interesse%20em%20contratar%20seu%20servi%C3%A7o%20!"
+                  target="_blank"
+                >
                   <AiOutlineWhatsApp />
                 </a>
               </li>
