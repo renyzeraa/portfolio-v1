@@ -7,9 +7,9 @@ export default createGlobalStyle`
   box-sizing: border-box;
 }
 
-:root {
+/* :root {
   font-size: 62.5%;
-}
+} */
 
 html{
   scroll-behavior: smooth;
@@ -67,6 +67,10 @@ strong {
 ::-webkit-scrollbar-thumb:hover {
   background: #A839FF; 
   
+}
+
+.wrapper {
+  padding: 0 24px ;
 }
 
 

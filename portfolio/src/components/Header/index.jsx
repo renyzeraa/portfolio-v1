@@ -5,10 +5,10 @@ import { AiOutlineClose } from 'react-icons/ai'
 export function Header() {
   return (
     <Container>
-      <main className="desktop">
-        <div className="logo">
+      <main className="wrapper">
+        <a href="#home" className="logo">
           <p>&lt;/renyzeraa&gt;</p>
-        </div>
+        </a>
         <nav className="menu-nav">
           <ul>
             <li>
