@@ -100,6 +100,11 @@ export const Container = styled.div`
       visibility: visible;
     }
 
+    .wrapper {
+      max-width: 1120px;
+      margin: 0 auto;
+    }
+
     header .menu ul:first-child {
       display: flex;
       font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
