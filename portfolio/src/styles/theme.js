@@ -22,8 +22,7 @@ export default {
     // REGULAR & BOLD
     FONT_IBM: "'IBM Plex Mono', monospace;",
     // REGULAR & BOLD
-    FONT_FIRA: "'Fira Sans', sans-serif;",
-    FONT_ANNIE: "'Annie Use Your Telescope', cursive;",
+    FONT_FIRA_SANS: "'Fira Sans', sans-serif;",
     FONT_FIRA_CODE: "'Fira Code', monospace;"
   }
 }

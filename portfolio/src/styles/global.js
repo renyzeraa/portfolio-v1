@@ -30,6 +30,9 @@ button , a {
   transition: filter 0.2s;
 }
 
+a {
+  color: white;
+}
 
 
 button:hover {
