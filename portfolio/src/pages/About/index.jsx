@@ -1,6 +1,7 @@
 import { Container } from './style'
 import { Header } from '../../components/Header'
 import { Socials } from '../../components/Socials'
+import { Title } from '../../components/Title'
 
 export function About() {
   return (
@@ -8,7 +9,7 @@ export function About() {
       <Header />
       <Socials />
       <main>
-        <h1>Renan</h1>
+        <Title>Teste</Title>
       </main>
     </Container>
   )

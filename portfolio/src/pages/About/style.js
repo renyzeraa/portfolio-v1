@@ -9,7 +9,7 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
-  @media (min-width: 800px) {
+  @media (min-width: 750px) {
     background-image: url(${bgdesktop});
   }
 `
