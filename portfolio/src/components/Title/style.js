@@ -11,7 +11,7 @@ export const Container = styled.div`
   margin: 38px auto;
 
   @media (max-width: 750px) {
-    margin: 12px auto;
+    margin: 24px auto;
     font-size: 32px;
   }
 `

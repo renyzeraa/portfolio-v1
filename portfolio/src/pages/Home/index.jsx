@@ -1,6 +1,7 @@
 import { Container } from './style'
 import { Header } from '../../components/Header'
 import { Socials } from '../../components/Socials'
+import { Footer } from '../../components/Footer'
 import profile from '../../assets/profile-img.png'
 
 export function Home() {
@@ -21,6 +22,7 @@ export function Home() {
           <img src={profile} alt="Image de Renan Silva" />
         </div>
       </main>
+      <Footer />
     </Container>
   )
 }
