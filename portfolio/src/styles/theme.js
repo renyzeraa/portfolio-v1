@@ -5,6 +5,7 @@ export default {
     BACKGROUND_800: '#141414',
 
     BLACK: '#000000',
+    PURPLE_025: '#e9ccff',
     PURPLE_050: '#b629f8',
     PURPLE_100: '#A839FF',
     PURPLE_200: '#701CDA',
