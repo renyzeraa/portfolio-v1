@@ -6,12 +6,13 @@ import theme from './styles/theme'
 import GlobalStyle from './styles/global'
 
 import { Home } from './pages/Home'
+import { About } from './pages/About'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <Home />
+      <About />
     </ThemeProvider>
   </React.StrictMode>
 )
