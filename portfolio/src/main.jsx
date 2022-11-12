@@ -7,12 +7,13 @@ import GlobalStyle from './styles/global'
 
 import { Home } from './pages/Home'
 import { About } from './pages/About'
+import { Projects } from './pages/Projects'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <GlobalStyle />
-      <About />
+      <Projects />
     </ThemeProvider>
   </React.StrictMode>
 )
