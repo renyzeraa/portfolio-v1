@@ -2,7 +2,6 @@ import { Container } from './style'
 import { Header } from '../../components/Header'
 import { Socials } from '../../components/Socials'
 import { Title } from '../../components/Title'
-import { Footer } from '../../components/Footer'
 import css from '../../assets/techs/css.svg'
 import git from '../../assets/techs/git.svg'
 import html from '../../assets/techs/html.svg'
@@ -55,7 +54,6 @@ export function About() {
           </ul>
         </div>
       </main>
-      <Footer />
     </Container>
   )
 }

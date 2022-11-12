@@ -11,6 +11,7 @@ export const Container = styled.div`
   main {
     max-width: 1020px;
     margin: 0 auto;
+    padding-bottom: 80px;
     p {
       font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_SANS};
       font-size: 22px;
@@ -35,5 +36,19 @@ export const Container = styled.div`
 
   @media (min-width: 750px) {
     background-image: url(${bgdesktop});
+    height: 100vh;
+    main {
+      padding: 0 50px;
+      .tech-icons {
+        margin-top: 90px;
+        ul {
+          display: flex;
+          flex-wrap: nowrap;
+          align-content: center;
+          width: max-content;
+          max-width: 100%;
+        }
+      }
+    }
   }
 `
