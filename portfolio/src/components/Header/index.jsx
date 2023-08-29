@@ -2,6 +2,7 @@ import { Container } from './style'
 import { HiMenuAlt3 } from 'react-icons/hi'
 import { IoClose } from 'react-icons/io5'
 import { AiFillLinkedin, AiFillGithub } from 'react-icons/ai'
+import { Link } from 'react-router-dom'
 
 export function Header() {
   function openMenu() {
@@ -22,29 +23,29 @@ export function Header() {
           <div className="menu">
             <ul>
               <li>
-                <a onClick={closeMenu} href="#home">
+                <Link onClick={closeMenu} to="/">
                   Inicio
-                </a>
+                </Link>
               </li>
               <li>
-                <a onClick={closeMenu} href="#about">
+                <Link onClick={closeMenu} to="/about">
                   Sobre
-                </a>
+                </Link>
               </li>
               <li>
-                <a onClick={closeMenu} href="#projects">
+                <Link onClick={closeMenu} to="/projects">
                   Projetos
-                </a>
+                </Link>
               </li>
               <li>
-                <a onClick={closeMenu} href="#formation">
+                <Link onClick={closeMenu} to="/formation">
                   Formação
-                </a>
+                </Link>
               </li>
               <li>
-                <a onClick={closeMenu} href="#formation">
+                <Link onClick={closeMenu} to="/contact">
                   Contato
-                </a>
+                </Link>
               </li>
             </ul>
 
