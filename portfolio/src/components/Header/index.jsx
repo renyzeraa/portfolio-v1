@@ -17,9 +17,9 @@ export function Header() {
     <Container>
       <header id="navigation">
         <div className="wrapper">
-          <a href="#home" className="logo">
+          <Link to="/" className="logo">
             <p>&lt;renyzeraa/&gt;</p>
-          </a>
+          </Link>
           <div className="menu">
             <ul>
               <li>
