@@ -17,7 +17,8 @@ html{
 }
 
 body {
-  background: ${({ theme }) => theme.COLORS.GRADIENT}; 
+  background: ${({ theme }) => theme.COLORS.GRADIENT};
+  overflow: hidden;
 }
 
 ul {
@@ -48,6 +49,7 @@ strong {
   color:${({ theme }) => theme.COLORS.WHITE}; 
 }
 
+
 ::-webkit-scrollbar {
   width: 12px;
 }
@@ -55,9 +57,7 @@ strong {
 /* Track */
 ::-webkit-scrollbar-track {
   box-shadow: inset 0 0 5px grey; 
-  background: black; 
- 
-  
+  background: black;  
 }
  
 /* Handle */
@@ -69,12 +69,13 @@ strong {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #A839FF; 
-  
 }
 
 .wrapper {
   padding: 0 24px ;
 }
 
-
+.main-container {
+  height: 100vh;
+}
 `
