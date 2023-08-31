@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom'
 
 export function Header() {
   function openMenu() {
-    document.querySelector('header').classList.add('menu-expanded')
+    document.getElementById('navigation').classList.add('menu-expanded')
   }
 
   function closeMenu() {
-    document.querySelector('header').classList.remove('menu-expanded')
+    document.getElementById('navigation').classList.remove('menu-expanded')
   }
 
   return (
@@ -21,28 +21,28 @@ export function Header() {
             <p>&lt;renyzeraa/&gt;</p>
           </Link>
           <div className="menu">
-            <ul>
-              <li>
+            <ul className='menu-list'>
+              <li className='menu-option'>
                 <Link onClick={closeMenu} to="/">
                   Inicio
                 </Link>
               </li>
-              <li>
+              <li className='menu-option'>
                 <Link onClick={closeMenu} to="/about">
                   Sobre
                 </Link>
               </li>
-              <li>
+              <li className='menu-option'>
                 <Link onClick={closeMenu} to="/projects">
                   Projetos
                 </Link>
               </li>
-              <li>
+              <li className='menu-option'>
                 <Link onClick={closeMenu} to="/formation">
                   Formação
                 </Link>
               </li>
-              <li>
+              <li className='menu-option'>
                 <Link onClick={closeMenu} to="/contact">
                   Contato
                 </Link>
