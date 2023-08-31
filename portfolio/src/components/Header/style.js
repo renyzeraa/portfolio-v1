@@ -11,6 +11,7 @@ export const Container = styled.div`
       align-items: center;
       height: 80px;
       padding: 16px 24px;
+
       .logo {
         font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
         font-size: 1.5rem;
@@ -28,109 +29,115 @@ export const Container = styled.div`
         font-size: 2.4rem;
       }
     }
-  }
 
-  header .menu,
-  header .close-menu,
-  header.menu-expanded .open-menu {
-    opacity: 0;
-    visibility: hidden;
-    overflow: auto;
-  }
+    .menu,
+    .close-menu,
+    &.menu-expanded .open-menu {
+      opacity: 0;
+      visibility: hidden;
+      overflow: auto;
+    }
 
-  header .menu {
-    display: none;
-  }
+    .menu {
+      display: none;
+    }
 
-  header.menu-expanded .menu,
-  header.menu-expanded .close-menu {
-    opacity: 1;
-    visibility: visible;
-    display: block;
-  }
+    &.menu-expanded {
+      .menu, .close-menu {
+        opacity: 1;
+        visibility: visible;
+        display: block;
+      }
 
-  header.menu-expanded .close-menu {
-    position: absolute;
-    right: 24px;
-  }
+      .close-menu {
+        position: absolute;
+        right: 24px;
+      }
 
-  header.menu-expanded .menu {
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
-    width: 100vw;
-    height: 100vh;
-    text-align: center;
-  }
+      .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+        width: 100vw;
+        height: 100vh;
+        text-align: center;
+        .menu-list{
+          &:nth-child(1) {
+            display: flex;
+            flex-direction: column;
+            gap: 1.8rem;
+            margin-top: 10rem;
+            font-weight: 700;
+            font-size: 1.8rem;
+            font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
+            text-transform: lowercase;
+          }
+        }
 
-  header.menu-expanded .menu ul:nth-child(1) {
-    display: flex;
-    flex-direction: column;
-    gap: 1.8rem;
-    margin-top: 10rem;
-    font-weight: 700;
-    font-size: 1.8rem;
-    font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
-    text-transform: lowercase;
-  }
-
-  header.menu-expanded .social-links {
-    position: absolute;
-    bottom: 40px;
-    right: 50%;
-    left: 50%;
-    font-size: 3rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-  }
-
-  header.menu-expanded .logo {
-    position: relative;
-    z-index: 100;
+        .social-links {
+          position: absolute;
+          bottom: 40px;
+          right: 50%;
+          left: 50%;
+          font-size: 3rem;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+        }
+      }
+      
+      .logo {
+        position: relative;
+        z-index: 100;
+      }
+    }
   }
 
   @media (min-width: 750px) {
-    .open-menu,
-    .close-menu {
-      display: none;
-      opacity: 1;
-      visibility: visible;
-    }
+    #navigation {
+      .open-menu,
+      .close-menu {
+        display: none;
+        opacity: 1;
+        visibility: visible;
+      }
 
-    .wrapper {
-      max-width: 1120px;
-      margin: 0 auto;
-    }
+      .wrapper {
+        max-width: 1120px;
+        margin: 0 auto;
+      }
 
-    header .menu ul:first-child {
-      display: flex;
-      font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
-      gap: 24px;
-    }
+      .menu {
+        display: block;
+        opacity: 1;
+        visibility: visible;
 
-    header .menu ul:first-child li {
-      border-bottom: 2px solid transparent;
-      transform: translateX(0);
-      padding: 8px 0;
-    }
+        .menu-list {
+          &:first-child {
+            display: flex;
+            font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
+            gap: 24px;
 
-    header .menu ul:first-child li:hover {
-      transition: 0.4s ease-in-out;
-      transform: translateY(-5px);
-      border-color: white;
-    }
+            .menu-option {
+              border-bottom: 2px solid transparent;
+              transform: translateX(0);
+              padding: 8px 0;
 
-    header .menu {
-      display: block;
-      opacity: 1;
-      visibility: visible;
-    }
+              &:hover {
+                transition: 0.4s ease-in-out;
+                transform: translateY(-5px);
+                border-color: white;
+              }
+            }
+          }
+        }
 
-    header .social-links {
-      display: none;
+        .social-links {
+          display: none;
+        }
+      }
     }
   }
 `
