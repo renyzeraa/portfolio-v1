@@ -8,6 +8,9 @@ export function Home() {
     <Container>
       <Header />
       <Socials />
+      <main className='main-container'>
+
+      </main>
       <Footer />
     </Container>
   )
