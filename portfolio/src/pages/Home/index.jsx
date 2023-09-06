@@ -6,10 +6,12 @@ import { Footer } from '../../components/Footer'
 export function Home() {
   return (
     <Container>
-      <Header />
       <Socials />
+      <Header />
       <main className='main-container'>
-
+        <div className='container'>
+          
+        </div>
       </main>
       <Footer />
     </Container>

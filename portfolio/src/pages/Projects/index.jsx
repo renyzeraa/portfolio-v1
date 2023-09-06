@@ -48,21 +48,8 @@ export function Projects() {
     <Container>
       <Header />
       <Socials />
-      <main className="wrapper">
+      <main className="main-container wrapper">
         <Title>Projetos</Title>
-        {loading ? (
-          <p>Carregando...</p>
-        ) : (
-          <ul>
-            {repos.map((repo) => (
-              <li key={repo.id}>
-                <a href={repo.html_url} target="_blank" rel="noopener noreferrer">
-                  {repo.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        )}
       </main>
       <Footer />
     </Container>

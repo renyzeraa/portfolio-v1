@@ -6,8 +6,8 @@ export default createGlobalStyle`
   padding: 0;
   box-sizing: border-box;
 }
-
-/* :root {
+/* 
+:root {
   font-size: 62.5%;
 } */
 
@@ -56,7 +56,7 @@ strong {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  box-shadow: inset 0 0 5px grey; 
+  box-shadow: inset 0 0 0.5rem grey; 
   background: black;  
 }
  
@@ -77,5 +77,6 @@ strong {
 
 .main-container {
   height: 100vh;
+  padding: 0 24px;
 }
 `

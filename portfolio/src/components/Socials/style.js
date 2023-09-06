@@ -6,7 +6,7 @@ export const Container = styled.div`
   left: 8px;
   top: 40%;
   bottom: 60%;
-
+  
   li {
     padding-bottom: 10px;
     &:hover {
@@ -16,6 +16,7 @@ export const Container = styled.div`
   }
 
   @media (max-width: 750px) {
-    display: none;
+    bottom: 10%;
+    top: auto;
   }
 `

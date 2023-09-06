@@ -6,8 +6,10 @@ import { Footer } from '../../components/Footer'
 export function Contact() {
   return (
     <Container>
-      <Header />
       <Socials />
+      <Header />
+      <main className='main-container'>
+      </main>
       <Footer />
     </Container>
   )
