@@ -40,6 +40,7 @@ export const Container = styled.div`
 
     .menu {
       display: none;
+      left: -300px;
     }
 
     &.menu-expanded {
@@ -62,6 +63,8 @@ export const Container = styled.div`
         width: 100vw;
         height: 100vh;
         text-align: center;
+        transition: left 0.9s ease;
+
         .menu-list{
           &:nth-child(1) {
             display: flex;
