@@ -4,6 +4,7 @@ import bgHomeMobile from '../../assets/bg/bg-home-mob.png'
 
 export const Container = styled.div`
   overflow: auto;
+  height: 100vh;
   background-image: url(${bgHomeMobile});
   background-position: center center;
   background-repeat: no-repeat;

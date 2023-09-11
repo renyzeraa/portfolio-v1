@@ -76,7 +76,6 @@ strong {
 }
 
 .main-container {
-  height: 100vh;
   padding: 0 24px;
   overflow: visible;
   max-width: 1120px;
