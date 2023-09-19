@@ -47,11 +47,11 @@ export const Container = styled.div`
 @media (min-width: 455px) {
   .container {
     .title {
-      font-size: 7.5rem;
+      font-size: 6.2rem;
     }
 
     .description { 
-      font-size: 2.94rem;
+      font-size: 2.5rem;
     }
   }
 }
