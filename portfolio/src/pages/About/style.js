@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import bgAbout from '../../assets/bg/bg-about.png'
-import bgAboutMobile from '../../assets/bg/bg-about-mob.png'
+import bgAbout from '../../assets/bg/bgAbout.svg'
+import bgAboutMobile from '../../assets/bg/bgAboutMobile.svg'
 
 export const Container = styled.div`
   height: 100vh;

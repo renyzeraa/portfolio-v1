@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import bgHome from '../../assets/bg/bg-home.png'
-import bgHomeMobile from '../../assets/bg/bg-home-mob.png'
+import bgHome from '../../assets/bg/bgHome.svg'
+import bgHomeMobile from '../../assets/bg/bgHomeMobile.svg'
 
 export const Container = styled.div`
   overflow: auto;
