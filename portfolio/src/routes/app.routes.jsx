@@ -20,7 +20,7 @@ export function AppRoutes() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/formation" element={<Formation />} />
+        {/* <Route path="/formation" element={<Formation />} /> */}
         <Route path="/projects" element={<Projects />} />
       </Routes>
   )
