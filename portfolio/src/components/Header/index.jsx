@@ -37,11 +37,11 @@ export function Header() {
                   Projetos
                 </Link>
               </li>
-              <li className='menu-option'>
+              {/* <li className='menu-option'>
                 <Link onClick={closeMenu} to="/formation">
                   Formação
                 </Link>
-              </li>
+              </li> */}
               <li className='menu-option'>
                 <Link onClick={closeMenu} to="/contact">
                   Contato
