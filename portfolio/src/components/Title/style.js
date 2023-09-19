@@ -9,6 +9,12 @@ export const Container = styled.div`
   text-shadow: 9px 9px 8px rgba(0, 0, 0, 0.7);
   text-align: center;
   margin: 0 auto;
+  
+  h1 {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: text-overflow 0.9s;
+  }
 
   @media (max-width: 750px) {
     margin: 24px auto;
