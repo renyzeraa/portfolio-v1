@@ -12,13 +12,12 @@ export const Container = styled.div`
 
   .main-container {
     .container {
-      .text-area {
-
-      }
-
+      margin-top: 40px;
+      
       .technologies-container {
         width: 100%;
-
+        margin-top: 40px;
+        margin-bottom: 120px;
         .techs-list {
           display: flex;
           flex-direction: row;
@@ -33,6 +32,11 @@ export const Container = styled.div`
       }
     }
   }
+
+  @media (min-width: 728px) {
+    background-image: url(${bgAbout});
+  }
+
 `
 
 export const Text = styled.p`
@@ -42,4 +46,9 @@ export const Text = styled.p`
   font-size: 22px;
   line-height: normal;
   margin-bottom: 1.4rem;
+
+  a {
+    font-weight: 500;
+    text-decoration: underline;
+  }
 `

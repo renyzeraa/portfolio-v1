@@ -79,6 +79,6 @@ strong {
   padding: 0 48px;
   overflow: visible;
   max-width: 1120px;
-  margin: 48px auto;
+  margin: 28px auto;
 }
 `

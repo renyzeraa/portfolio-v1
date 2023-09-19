@@ -8,7 +8,7 @@ export const Container = styled.div`
   color: ${({ theme }) => theme.COLORS.GRAY_100};
   text-shadow: 9px 9px 8px rgba(0, 0, 0, 0.7);
   text-align: center;
-  margin: 38px auto;
+  margin: 0 auto;
 
   @media (max-width: 750px) {
     margin: 24px auto;
