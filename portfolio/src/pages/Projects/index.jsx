@@ -5,17 +5,38 @@ import { Header } from '../../components/Header'
 import { Socials } from '../../components/Socials'
 import { Footer } from '../../components/Footer'
 import { Title } from '../../components/Title'
+import { Loading } from '../../components/Loading'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import 'swiper/css'
+import 'swiper/swiper-bundle.css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
-import { Pagination, Navigation } from 'swiper'
+import SwiperCore, { Navigation, Pagination } from 'swiper'
+import 'swiper/swiper-bundle.css'
+SwiperCore.use([Navigation, Pagination])
 
 export function Projects() {
-
   const [repos, setRepos] = useState([]);
   const [loading, setLoading] = useState(true);
+
+  const breakpoints = {
+    // quando a largura da tela for menor ou igual a 550 pixels
+    550: {
+      slidesPerView: 2,
+      spaceBetween: 15
+    },
+    // quando a largura da tela for menor ou igual a 768 pixels
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 15
+    },
+    // quando a largura da tela for maior que 768 pixels
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 15
+    }
+  }
 
   useEffect(() => {
     // Substitua 'SEU_TOKEN_DE_ACESSO' pelo token que você gerou no GitHub.
@@ -48,8 +69,33 @@ export function Projects() {
     <Container>
       <Header />
       <Socials />
+      {loading && <Loading></Loading>}
       <main className="main-container wrapper">
         <Title>Projetos</Title>
+        <div className='swipper-container'>
+          <Swiper
+            spaceBetween={20}
+            className="mySwiper"
+            slidesPerView={1}
+            breakpoints={breakpoints}
+            navigation={true}
+            modules={[Pagination, Navigation]}
+          >
+            {
+              repos.map(oRepo => (
+                  <SwiperSlide key={oRepo.id}>
+                    <div className='card'>
+                      <h1 title={oRepo.name}>{oRepo.name}</h1>
+                      <p>{oRepo.description}</p>
+                      <a title={oRepo.html_url} href={oRepo.html_url} target="_blank" rel="noopener noreferrer">
+                        Ver no GitHub
+                      </a>
+                    </div>
+                  </SwiperSlide>
+              ))
+            }
+          </Swiper>
+        </div>
       </main>
       <Footer />
     </Container>
