@@ -76,7 +76,7 @@ strong {
 }
 
 .main-container {
-  padding: 0 24px;
+  padding: 0 48px;
   overflow: visible;
   max-width: 1120px;
   margin: 48px auto;
