@@ -10,8 +10,18 @@ export const Container = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
+  
+
+  .main-container {
+    padding: 0 24px;
+  }
+
   .swipper-container {
     margin-top: 48px;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    padding: 0 4px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 16px 8px ${({ theme }) => theme.COLORS.BACKGROUND_700};
 
     .mySwiper {
       .swiper-wrapper {
@@ -30,30 +40,52 @@ export const Container = styled.div`
             font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
             display: flex;
             flex-direction: column;
+            
+            &:hover {
+              transform: scale(1.03);
+              transition: transform 0.5s ease;
+            }
 
-            h1 {
-              white-space: nowrap;
+            .title {
+              white-space: wrap;
               font-size: 1.2rem;
               margin-bottom: 8px;
               overflow: hidden;
               text-overflow: ellipsis;
+              min-height: 3rem;
             }
             
-            p {
+            .description {
               font-size: 1rem;
               color: #333;
               margin-bottom: 16px;
             }
   
-            a {
+            .footer {
               margin-top: auto;
-              color: black;
-            }
-  
-            a:hover {
-              text-decoration: underline;
-            }
 
+              .infos, .forks, .starred, .icon-language {
+                display: flex;
+                align-items: center;
+                margin-right: 0.5rem;
+              }
+
+              .infos {
+                margin-bottom: 0.5rem;
+              }
+
+              .icon-language {
+                font-size: 1.5rem;
+              }
+
+              .link-github {
+                color: black;
+                
+                &:hover {
+                 text-decoration: underline;
+                }
+              }
+            }
           }
         }
       }
@@ -68,5 +100,15 @@ export const Container = styled.div`
 
   @media (min-width: 768px) {
     background-image: url(${bgDesktop});
+
+    .main-container {
+      padding: 0 52px;
+    }
+  }
+
+  @media (min-width: 1200px) { 
+    .main-container {
+      padding: 0 24px;
+    }
   }
 `
