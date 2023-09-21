@@ -12,7 +12,7 @@
     "axios": "^1.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-icons": "^4.4.0",
+    "react-icons": "^4.11.0",
     "react-router-dom": "^6.15.0",
     "styled-components": "^5.3.5",
     "swiper": "^8.4.4"
