@@ -32,34 +32,51 @@ export const Container = styled.div`
       .code-card {
         margin-top: 24px;
         flex: 1;
+        background-color: ${({ theme }) => theme.COLORS.BG_DRACULA_800};
+        color: ${({ theme }) => theme.COLORS.WHITE_TEXT};
+        border: 1px solid ${({ theme }) => theme.COLORS.BG_DRACULA_600};
+        border-radius: 8px;
+        overflow: hidden;
         display: flex;
         font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
         height: 425px;
         max-height: 100%;
 
         .line-numbers {
-          flex: 0 0 40px;
-          background-color: #333;
-          color: #ccc;
-          padding: 10px;
+          background-color: ${({ theme }) => theme.COLORS.BG_DRACULA_600};
+          padding: 16px 0;
           text-align: right;
-          border-right: 1px solid #555;
+          padding-right: 8px;  
+          background-color: ${({ theme }) => theme.COLORS.BG_DRACULA_600};
+          padding: 16px 0;
+          text-align: right;
+          padding-right: 8px;
+          border-right: 1px solid ${({ theme }) => theme.COLORS.GRAY};
           height: 100%;
           border-radius: 8px 0px 0px 8px;
           
           .line-number {
+            color: ${({ theme }) => theme.COLORS.DRACULA_TEXT};
+            font-size: 14px;
+            line-height: 1.6;
             margin-bottom: 5px;
           }
         }
 
         .code-content {
           flex: 1;
-          padding: 10px;
-          background-color: #f5f5f5;
+          padding: 16px;
+          flex-grow: 1;
+          overflow-x: auto;
           width: 100%;
           height: 100%;
           border-radius: 0px 8px 8px 0px;
+
           .code-line {
+            white-space: pre;
+            margin: 0;
+            font-size: 14px;
+            line-height: 1.6;
             white-space: pre-wrap;
             word-wrap: break-word;
           }
@@ -77,6 +94,7 @@ export const Container = styled.div`
         display: flex;
         gap: 12px;
         height: 100%;
+        margin-top: 28px;
       }
     }
   }
@@ -87,7 +105,6 @@ export const Container = styled.div`
     }
   }
 `
-
 export const Campo = styled.div`
   display: flex;
   flex-direction: column;
@@ -95,8 +112,8 @@ export const Campo = styled.div`
   margin-bottom: 1rem;
 
   label {
-    color: var(--c1, #F5F5F5);
-    font-family: Fira Code;
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
+    font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
     font-size: 24px;
     font-style: normal;
     font-weight: 450;
@@ -105,12 +122,12 @@ export const Campo = styled.div`
 
   input, textarea {
     border-radius: 8px;
-    border: 1px solid var(--c12, #292929);
-    background: var(--c12, #292929);
+    border: 1px solid ${({ theme }) => theme.COLORS.BG_DRACULA_800};
+    background: ${({ theme }) => theme.COLORS.BG_DRACULA_800};
     height: 2.5rem;
     padding: 8px;
     font-size: 18px;
-    color: var(--c1, #F5F5F5);
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
   }
 
   textarea {
@@ -121,7 +138,7 @@ export const Campo = styled.div`
 export const Button = styled.button`
   border: none;
   border-radius: 8px;
-  background: var(#F0F0F0);
+  background: ${({ theme }) => theme.COLORS.GRAY_100};
   display: flex;
   width: 185px;
   height: 48px;
@@ -130,16 +147,16 @@ export const Button = styled.button`
   align-items: center;
   gap: 10px;
 
-  color: var(#292929);
+  color: ${({ theme }) => theme.COLORS.BACKGROUND_700};
   text-align: right;
-  font-family: Fira Code;
+  font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};;
   font-size: 16px;
   font-weight: 700;
   line-height: normal;
 
   &:hover {
-    background: #292929;
-    color: #F0F0F0;
+    background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
+    color: ${({ theme }) => theme.COLORS.GRAY_100};
 
     transition: background 0.8s ease-out;
   }

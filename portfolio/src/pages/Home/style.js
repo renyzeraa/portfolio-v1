@@ -21,7 +21,7 @@ export const Container = styled.div`
     }
     
     .title {
-      color: var(--c2, #F0F0F0);
+      color: ${({ theme }) => theme.COLORS.GRAY_100};
       text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.70);
       font-family: IBM Plex Mono;
       font-size: 28vw;
@@ -31,10 +31,10 @@ export const Container = styled.div`
 
     .description {
       margin-top: 1rem;
-      color: var(--c1, #F5F5F5);
+      color: ${({ theme }) => theme.COLORS.GRAY_100};
       text-align: center;
-      text-shadow: 3px 4px 1px #000;
-      font-family: IBM Plex Mono;
+      text-shadow: 3px 4px 1px ${({ theme }) => theme.COLORS.BLACK};
+      font-family: ${({ theme }) => theme.FONTS.FONT_IBM};
       font-size: 9vw;
       font-weight: 700;
       line-height: 42px;

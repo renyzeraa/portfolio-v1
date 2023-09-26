@@ -28,12 +28,12 @@ export const Container = styled.div`
             margin-right: 0px !important;
   
             .card {
-              border: 1px solid #ddd;
+              border: 1px solid ${({ theme }) => theme.COLORS.BORDER_GRAY_100};;
               padding: 16px;
               margin: 8px;
               border-radius: 8px;
               box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-              background-color: #fff;
+              background-color: ${({ theme }) => theme.COLORS.WHITE};;
               text-align: left;
               height: 20rem;
               font-family: ${({ theme }) => theme.FONTS.FONT_FIRA_CODE};
@@ -56,7 +56,7 @@ export const Container = styled.div`
               
               .description {
                 font-size: 1rem;
-                color: #333;
+                color: ${({ theme }) => theme.COLORS.GRAY_500};
                 margin-bottom: 16px;
               }
     
