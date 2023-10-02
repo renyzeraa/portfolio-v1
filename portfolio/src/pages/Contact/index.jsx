@@ -4,10 +4,9 @@ import { Header } from '../../components/Header'
 import { Socials } from '../../components/Socials'
 import { Footer } from '../../components/Footer'
 import { Title } from '../../components/Title'
-
+import { api } from '../../services/api'
 import { Loading } from '../../components/Loading'
 
-import axios from 'axios'
 
 export function Contact() {
   const [nome, setNome] = useState('');
@@ -51,7 +50,7 @@ export function Contact() {
 
     try {
       setLoading(true);
-      const response = await axios.post('/api/enviar-email', {
+      const response = await api.post('/api/enviar-email', {
         nome,
         email,
         mensagem,
