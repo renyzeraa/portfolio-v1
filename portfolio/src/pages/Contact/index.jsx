@@ -4,6 +4,9 @@ import { Header } from '../../components/Header'
 import { Socials } from '../../components/Socials'
 import { Footer } from '../../components/Footer'
 import { Title } from '../../components/Title'
+
+import { Loading } from '../../components/Loading'
+
 import axios from 'axios'
 
 export function Contact() {
@@ -12,6 +15,8 @@ export function Contact() {
   const [mensagem, setMensagem] = useState('');
 
   const [currentDate, setCurrentDate] = useState(new Date());
+
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -45,20 +50,23 @@ export function Contact() {
     e.preventDefault();
 
     try {
+      setLoading(true);
       const response = await axios.post('/api/enviar-email', {
         nome,
         email,
         mensagem,
       });
-
       console.log('Email enviado com sucesso!', response.data);
+      setLoading(false);
     } catch (error) {
       console.error('Erro ao enviar o email', error);
+      setLoading(false);
     }
   };
 
   return (
     <Container>
+      {loading && <Loading/>}
       <Socials />
       <Header />
       <main className='main-container'>
