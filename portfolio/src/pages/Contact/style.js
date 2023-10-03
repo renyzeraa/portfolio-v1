@@ -12,9 +12,13 @@ export const Container = styled.div`
 
   .main-container {
     padding: 0 56px;
+    height: 100%;
 
     .form-container {
       margin-bottom: 48px;
+      .btn-enviar {
+        margin: 0 auto;
+      }
     }
 
     .code-card {
@@ -84,17 +88,24 @@ export const Container = styled.div`
       }
       .form-container {
         flex: 1;
+
       }
     }
   }
 
   @media (min-width: 820px){
     .main-container {
+      height: auto;
       .container {
         display: flex;
         gap: 12px;
         height: 100%;
         margin-top: 28px;
+        .form-container {
+          .btn-enviar {
+            margin: 0;
+          }
+        }
       }
     }
   }

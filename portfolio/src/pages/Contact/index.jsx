@@ -99,7 +99,7 @@ export function Contact() {
                 required
               />
             </Campo>
-            <Button type="submit">Enviar</Button>
+            <Button type="submit" className='btn-enviar'>Enviar</Button>
           </form>
             <div className="code-card">
               <div className="line-numbers">

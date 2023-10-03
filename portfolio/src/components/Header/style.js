@@ -23,7 +23,7 @@ export const Container = styled.div`
       background: none;
       border: none;
       max-width: min-content;
-
+      z-index: 2;
       svg {
         color: white;
         font-size: 2.4rem;
@@ -56,7 +56,7 @@ export const Container = styled.div`
       }
 
       .menu {
-        position: absolute;
+        position: fixed;
         top: 0;
         left: 0;
         background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
@@ -64,8 +64,8 @@ export const Container = styled.div`
         height: 100vh;
         text-align: center;
         transition: left 0.9s ease;
-
-        .menu-list{
+        z-index: 2;
+        .menu-list{ 
           &:nth-child(1) {
             display: flex;
             flex-direction: column;

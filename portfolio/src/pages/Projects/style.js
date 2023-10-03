@@ -13,8 +13,14 @@ export const Container = styled.div`
   
 
   .main-container {
-    padding: 0 24px;
+    padding: 0 48px;
     
+    &.wrapper {
+      > div {
+        font-size: 28px;
+      }
+    }
+
     .swipper-container {
       margin-top: 48px;
       background: ${({ theme }) => theme.COLORS.BACKGROUND_700};
@@ -105,6 +111,12 @@ export const Container = styled.div`
     .main-container {
       padding: 0 52px;
       height: 100%;
+
+      &.wrapper {
+        > div {
+          font-size: 34px;
+        }
+      }
     }
   }
 

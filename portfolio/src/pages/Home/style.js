@@ -24,7 +24,7 @@ export const Container = styled.div`
       color: ${({ theme }) => theme.COLORS.GRAY_100};
       text-shadow: 7px 7px 5px rgba(0, 0, 0, 0.70);
       font-family: IBM Plex Mono;
-      font-size: 28vw;
+      font-size: 25vw;
       line-height: 91px;
       text-transform: uppercase;
     }
