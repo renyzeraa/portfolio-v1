@@ -68,7 +68,7 @@ export const Container = styled.div`
     
               .footer {
                 margin-top: auto;
-  
+                font-size: 1.5rem;
                 .infos, .forks, .starred, .icon-language {
                   display: flex;
                   align-items: center;
@@ -85,7 +85,7 @@ export const Container = styled.div`
   
                 .link-github {
                   color: black;
-                  
+                  font-size: 1.1rem;
                   &:hover {
                    text-decoration: underline;
                   }
