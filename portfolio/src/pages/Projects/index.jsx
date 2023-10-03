@@ -29,7 +29,7 @@ export function Projects() {
   const breakpoints = {
     // quando a largura da tela for menor ou igual a 550 pixels
     550: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 15
     },
     // quando a largura da tela for menor ou igual a 768 pixels
@@ -122,6 +122,7 @@ export function Projects() {
             spaceBetween={20}
             className="mySwiper"
             slidesPerView={1}
+            slidesPerGroup={1}
             breakpoints={breakpoints}
             navigation={true}
             modules={[Pagination, Navigation]}
