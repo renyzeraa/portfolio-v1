@@ -50,12 +50,12 @@ export function Contact() {
 
     try {
       setLoading(true);
-      const response = await api.post('/api/enviar-email', {
-        nome,
-        email,
-        mensagem,
-      });
-      console.log('Email enviado com sucesso!', response.data);
+      // const response = await api.post('/api/enviar-email', {
+      //   nome,
+      //   email,
+      //   mensagem,
+      // });
+      // console.log('Email enviado com sucesso!', response.data);
       setLoading(false);
     } catch (error) {
       console.error('Erro ao enviar o email', error);
@@ -94,12 +94,13 @@ export function Contact() {
               <label>_mensagem:</label>
               <textarea
                 value={mensagem}
+                placeholder='no momento não é possivel enviar mensagens 😔'
                 onChange={(e) => setMensagem(e.target.value)}
                 rows="6"
                 required
               />
             </Campo>
-            <Button type="submit" className='btn-enviar'>Enviar</Button>
+            <Button type="submit" className='btn-enviar' disabled>Enviar</Button>
           </form>
             <div className="code-card">
               <div className="line-numbers">
